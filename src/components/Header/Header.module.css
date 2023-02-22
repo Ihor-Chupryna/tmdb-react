@@ -1,0 +1,7 @@
+.headerStyle {
+    height: 70px;
+    background: #739573;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
