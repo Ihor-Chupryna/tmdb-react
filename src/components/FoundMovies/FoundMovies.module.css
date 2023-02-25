@@ -1,0 +1,8 @@
+.foundMoviesContainer {
+    position: absolute;
+    background: white;
+}
+
+.foundMoviesContainer a {
+    text-decoration: none;
+}

@@ -3,6 +3,7 @@ const baseURL = 'https://api.themoviedb.org/3';
 const urls = {
     movies: '/discover/movie',
     movie: '/movie',
+    search: '/search/keyword',
     genres: '/genre/movie/list',
 }
 

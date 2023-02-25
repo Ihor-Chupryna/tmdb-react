@@ -1,0 +1,10 @@
+.movieInfoContainer {
+
+}
+.movieInfoLoading {
+    height: 90vh;
+    width: 99vw;
+    position: absolute;
+    top: 60px;
+    background: white
+}

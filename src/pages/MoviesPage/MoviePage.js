@@ -1,9 +1,9 @@
-import { MovieListCard } from "../../components";
+import { MoviesList } from "../../components";
 
 const MoviePage = () => {
     return (
         <div>
-            <MovieListCard/>
+            <MoviesList/>
         </div>
     );
 };

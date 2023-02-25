@@ -5,3 +5,11 @@
     justify-content: space-around;
     align-items: center;
 }
+
+.headerStyleLight {
+    background: lightblue;
+}
+
+.headerStyleDark {
+    background: darkcyan;
+}
