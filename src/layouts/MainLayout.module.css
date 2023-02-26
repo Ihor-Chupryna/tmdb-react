@@ -1,0 +1,12 @@
+.mainContainer {
+    background: green;
+    height: 100vh;
+}
+
+.lightTheme {
+    background: white;
+}
+
+.darkTheme {
+    background: dimgrey;
+}

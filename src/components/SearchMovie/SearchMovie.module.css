@@ -1,0 +1,15 @@
+.searchContainer button {
+    background: #969da2;
+    height: 30px;
+    width: 120px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.searchContainer input {
+    width: 220px;
+    margin: 5px;
+    height: 20px;
+    border-radius: 5px;
+}

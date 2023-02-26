@@ -3,6 +3,7 @@ import { useDispatch } from "react-redux";
 
 import { movieActions } from "../../redux/slices";
 import { FoundMovies } from "../FoundMovies/FoundMovies";
+import css from './SearchMovie.module.css';
 
 const SearchMovie = () => {
     const dispatch = useDispatch();
@@ -16,7 +17,7 @@ const SearchMovie = () => {
 
     return (
         <div>
-            <div>
+            <div className={css.searchContainer}>
                 <input type={'text'} placeholder={'search movie'} name={'movie'} ref={movie}/>
                 <button onClick={() => searchMovie()}>Search</button>
             </div>

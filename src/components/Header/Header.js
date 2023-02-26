@@ -17,12 +17,22 @@ const Header = () => {
     };
 
     return (
-        <div className={`${css.headerStyle} ${themeTrigger? css.headerStyleDark: css.headerStyleLight}`}>
-            <GenresList/>
-            <NavLink to={'/movies'}>Movies</NavLink>
-            <NavLink to={'/homePage'}>Home Page</NavLink>
+        <div className={`${css.headerStyle} ${themeTrigger ? css.headerStyleDark : css.headerStyleLight}`}>
+            <div className={css.navMenu}><GenresList/>
+                <NavLink to={'/movies'}>Movies</NavLink>
+                <NavLink to={'/homePage'}>Home Page</NavLink>
+                </div>
+
             <SearchMovie/>
-            <input type={"checkbox"} onClick={() => selectTheme()} ref={check}/>
+            <div className={css.switcher}>
+                <label className={css.switch}>
+                    <input type={"checkbox"} onChange={() => selectTheme()} ref={check}/>
+                    <span className={`${css.slider} ${css.round}`}></span>
+                </label>
+                <p>dark theme</p>
+            </div>
+
+            <div className={css.user}>Ihor</div>
         </div>
     );
 };

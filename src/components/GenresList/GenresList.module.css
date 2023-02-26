@@ -1,7 +1,36 @@
-.genresContainer {
-position: absolute;
-    top: 80px;
-    cursor:pointer;
-    background:aqua
+.genresButton {
+    background: #969da2;
+    height: 30px;
+    width: 120px;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+}
 
+.genresContainer {
+    padding: 5px;
+    position: absolute;
+    top: 60px;
+    cursor: pointer;
+    background: white;
+    z-index: 1;
+    font-size: 18px;
+}
+
+.lightGenres {
+    background: white;
+}
+
+.darkGenres {
+    background: darkgray;
+}
+
+.genresContainer p {
+    margin: 5px;
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.genresContainer p:hover {
+    color: green;
 }

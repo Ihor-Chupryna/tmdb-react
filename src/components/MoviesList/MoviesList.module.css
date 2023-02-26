@@ -1,0 +1,34 @@
+.mainContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.moviesLoading {
+    position:absolute;
+    background: white;
+    height: 40px;
+    width:  80%;
+    margin-left: 50px;
+}
+
+.moviesLoadingLight {
+    background: white;
+}
+
+.moviesLoadingDark {
+    background: dimgrey;
+}
+
+.mainContainer h1 {
+    margin:  15px 5px 15px 50px;
+}
+
+.moviesList {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 25px;
+}
+
+.pagination {
+    margin: 49px 0 49px 0;
+}

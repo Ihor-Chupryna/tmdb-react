@@ -1,24 +1,19 @@
 import { useNavigate } from "react-router-dom";
+import { Rating } from "@mantine/core";
 
-import css from './MovieListCardStyle.module.css';
+import css from './MovieListCard.module.css';
+import { urls } from "../../configs/urls";
 
 const MovieListCard = ({ movie }) => {
-    const { original_title, id } = movie;
+    const { original_title, id, poster_path, vote_average } = movie;
     const navigate = useNavigate();
 
-    const enter = (e) => {
-        e.target.className = css.red
-
-    }
-    const out = (e) => {
-        e.target.className = css.none
-        // console.log(e)
-    }
-
     return (
-        <div>
-            {movie && <div onClick={() => navigate(id.toString(), {state: movie})}>
-                <div onMouseEnter={enter} onMouseOut={out}>{original_title}</div>
+        <div className={css.movieContainer}>
+            {movie && <div onClick={() => navigate(id.toString(), { state: movie })}>
+                <img src={urls.images(300, poster_path)} alt="movie poster"/>
+                <Rating value={vote_average} fractions={1} count={10} size="xs" readOnly/>
+                <p>{original_title}</p>
             </div>}
         </div>
     );

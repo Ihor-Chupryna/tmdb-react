@@ -7,7 +7,7 @@ import css from './GenresList.module.css';
 const GenresList = () => {
     const dispatch = useDispatch();
     const navigate = useNavigate();
-    let { genres } = useSelector(state => state.movieReducer);
+    const { genres, themeTrigger } = useSelector(state => state.movieReducer);
 
     const getGenresList = () => {
         dispatch(movieActions.getGenres())
@@ -15,12 +15,13 @@ const GenresList = () => {
 
     return (
         <div>
-            <button onClick={() => getGenresList()}>Genres</button>
-            <div className={css.genresContainer} onClick={()=> dispatch(movieActions.cleanArray([]))}>
+            <button className={css.genresButton} onClick={() => getGenresList()}>Genres</button>
+            <div className={`${css.genresContainer} ${themeTrigger ? css.darkGenres : css.lightGenres}`}
+                 onClick={()=> dispatch(movieActions.cleanArray([]))}>
 
-                {genres.map(value => <div key={value.id} onClick={()=> navigate('/movies', { state: value })}>
+                {genres.map(value => <p key={value.id} onClick={()=> navigate('/movies', { state: value })}>
                         {value.name}
-                </div>)}
+                </p>)}
             </div>
         </div>
     );

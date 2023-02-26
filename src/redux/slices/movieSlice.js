@@ -1,6 +1,7 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
-import { genresService, moviesService } from "../../services";
+import { moviesService as genresService, moviesService } from "../../services";
+
 
 const initialState = {
     movies: [],
@@ -9,7 +10,10 @@ const initialState = {
     genres: [],
     themeTrigger: false,
     errors: null,
-    loading: null
+    loading: null,
+    page: 1,
+    videos: [],
+    trailer: []
 };
 
 const getAll = createAsyncThunk(
@@ -31,8 +35,6 @@ const getById = createAsyncThunk(
             const { data } = await moviesService.getById(movieId);
             return data
         } catch (e) {
-            // console.log(thunkAPI.rejectWithValue(e.response.data))
-            // console.log(thunkAPI.rejectWithValue(e.message))
             return thunkAPI.rejectWithValue(e.response.data)
         }
     }
@@ -51,10 +53,22 @@ const searchByKeyword = createAsyncThunk(
 );
 
 const getGenres = createAsyncThunk(
-    'genresSlice/getGenres',
+    'movieSlice/getGenres',
     async (_, thunkAPI) => {
         try {
             const { data } = await genresService.getGenresList();
+            return data
+        } catch (e) {
+            return thunkAPI.rejectWithValue(e.response.data)
+        }
+    }
+);
+
+const getVideos = createAsyncThunk(
+    'movieSlice/getVideos',
+    async ({ movieId }, thunkAPI) => {
+        try {
+            const { data } = await moviesService.getVideo(movieId);
             return data
         } catch (e) {
             return thunkAPI.rejectWithValue(e.response.data)
@@ -101,6 +115,10 @@ const movieSlice = createSlice({
                 state.loading = false
                 state.genres = action.payload.genres
             })
+            .addCase(getVideos.fulfilled, (state, action) => {
+                state.videos = action.payload.results
+                state.trailer = action.payload.results.find(value => value.type === 'Trailer')
+            })
 });
 
 
@@ -111,6 +129,7 @@ const movieActions = {
     getById,
     searchByKeyword,
     getGenres,
+    getVideos,
     setThemeTrigger,
     cleanArray,
 }

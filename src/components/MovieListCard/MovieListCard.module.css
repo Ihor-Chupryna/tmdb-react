@@ -1,0 +1,29 @@
+.movieContainer {
+    display: flex;
+    row-gap: 10px;
+    width: 180px;
+    height: 340px;
+    padding: 5px;
+    margin: 2px auto;
+    box-sizing: border-box;
+    cursor: pointer;
+    overflow: hidden;
+}
+
+.movieContainer img {
+    width: 100%;
+    margin-top: 5px;
+    border-radius: 5px;
+    transition: all .125s ease;
+}
+
+.movieContainer p {
+    margin: 5px;
+    font: 15px Tahoma;
+    font-weight: bold;
+}
+
+.movieContainer img:hover {
+    transform: scale(1.1);
+}
+
