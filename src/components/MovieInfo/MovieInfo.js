@@ -63,5 +63,4 @@ const MovieInfo = () => {
     );
 };
 
-
 export { MovieInfo };

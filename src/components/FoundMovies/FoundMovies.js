@@ -5,7 +5,7 @@ import { movieActions } from "../../redux/slices";
 import css from './FoundMovies.module.css';
 
 const FoundMovies = () => {
-    let { foundMovies } = useSelector(state => state.movieReducer);
+    const { foundMovies } = useSelector(state => state.movieReducer);
     const dispatch = useDispatch();
 
     return (
@@ -17,6 +17,5 @@ const FoundMovies = () => {
         </div>
     );
 };
-
 
 export { FoundMovies };

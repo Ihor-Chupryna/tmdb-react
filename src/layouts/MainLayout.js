@@ -5,7 +5,6 @@ import { Header } from "../components";
 import css from './MainLayout.module.css';
 
 const MainLayout = () => {
-
     const { themeTrigger } = useSelector(state => state.movieReducer);
 
     return (
