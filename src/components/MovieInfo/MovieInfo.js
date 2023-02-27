@@ -57,7 +57,6 @@ const MovieInfo = () => {
                     <Video movieId={movieId}/>
                 </div>
             </div>}
-
             <button onClick={() => navigate('/movies')}>BACK</button>
         </div>
     );

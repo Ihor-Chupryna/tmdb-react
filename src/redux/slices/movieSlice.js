@@ -121,7 +121,6 @@ const movieSlice = createSlice({
             })
 });
 
-
 const { reducer: movieReducer, actions: { setThemeTrigger, cleanArray } } = movieSlice;
 
 const movieActions = {

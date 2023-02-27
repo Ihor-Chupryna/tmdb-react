@@ -22,7 +22,6 @@ const Header = () => {
                 <NavLink to={'/movies'}>Movies</NavLink>
                 <NavLink to={'/homePage'}>Home Page</NavLink>
                 </div>
-
             <SearchMovie/>
 
             <div className={css.switcher}>
