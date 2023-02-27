@@ -8,6 +8,7 @@
     box-sizing: border-box;
     cursor: pointer;
     overflow: hidden;
+    box-shadow: 5px 5px 5px black;
 }
 
 .movieContainer img {

@@ -2,7 +2,6 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 
 import { moviesService as genresService, moviesService } from "../../services";
 
-
 const initialState = {
     movies: [],
     foundMovies: [],
@@ -88,6 +87,7 @@ const movieSlice = createSlice({
             state.genres = action.payload
         }
     },
+
     extraReducers: (builder) =>
         builder
             .addCase(getAll.fulfilled, (state, action) => {

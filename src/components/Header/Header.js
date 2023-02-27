@@ -24,6 +24,7 @@ const Header = () => {
                 </div>
 
             <SearchMovie/>
+
             <div className={css.switcher}>
                 <label className={css.switch}>
                     <input type={"checkbox"} onChange={() => selectTheme()} ref={check}/>

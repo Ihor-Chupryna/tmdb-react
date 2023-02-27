@@ -14,14 +14,6 @@ function App() {
 
                 <Route path={'movies'} element={<MoviePage/>}/>
                 <Route path={'movies/:movieId'} element={<MovieInfo/>}/>
-
-                {/*<Route path={'foundMovies'} element={<FoundMovies/>}/>*/}
-                {/*<Route path={'foundMovies/:movieId'} element={<MovieInfo/>}/>*/}
-
-                {/*<Route path={'genres'} element={<GenresPage/>}>*/}
-                {/*    <Route path={':genre'} element={<MoviesByGenreList/>}/>*/}
-                {/*</Route>*/}
-                {/*<Route path={'genres/:genre/:movieId'} element={<MovieInfo/>}/>*/}
             </Route>
         </Routes>
     );

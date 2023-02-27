@@ -96,7 +96,7 @@ input:checked + .slider:before {
 .slider.round:before {
     border-radius: 50%;
 }
-
+/*........................*/
 .user {
     padding-top: 13px;
     text-align: center;

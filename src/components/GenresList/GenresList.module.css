@@ -32,5 +32,5 @@
 }
 
 .genresContainer p:hover {
-    color: green;
+    background: red;
 }

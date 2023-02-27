@@ -6,7 +6,7 @@ import { Rating } from "@mantine/core";
 import css from './MovieInfo.module.css';
 import { movieActions } from "../../redux/slices";
 import { Video } from "../Video/Video";
-import { urls } from "../../configs/urls";
+import { urls } from "../../configs";
 
 const MovieInfo = () => {
     const dispatch = useDispatch();

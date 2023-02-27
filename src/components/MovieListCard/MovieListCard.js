@@ -2,7 +2,7 @@ import { useNavigate } from "react-router-dom";
 import { Rating } from "@mantine/core";
 
 import css from './MovieListCard.module.css';
-import { urls } from "../../configs/urls";
+import { urls } from "../../configs";
 
 const MovieListCard = ({ movie }) => {
     const { original_title, id, poster_path, vote_average } = movie;
